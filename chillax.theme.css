@@ -43,7 +43,7 @@
     --background-image: var(--wallpaper);
     --bg-opacity: 100%;
     /*bg dev suggestions*/
-    --wallpaper: url("https://wallpaperaccess.com/full/2799204.jpg");
+    --wallpaper: url("https://imgur.com/LqHgNsp.jpg");
     /*modern background selection*/
     --modern-dark-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-dark-bg.png");
     --modern-light-bg: url("https://warrayquipsome.github.io/Chillax/Wallpapers/modern-light-bg.png");
@@ -71,8 +71,8 @@
 
 /*roots*/ /*both dark and light*/
 :root {
-    --user-name: "King";
-    --edited-message: " EDITED ✎ ";
+    --user-name: "Chara";
+    --edited-message: "L + MISSINPUT";
     --font-name: Poppins;
     --font-size: 13px;
     --group-chat-font: "Monoton"; /* change this to change the group chat's default font */
@@ -97,9 +97,9 @@
 
     /* For accent color to take full effect must need to change both */
     /* chillax colours rgb */
-    --accentcolor: 251, 84, 84;
+    --accentcolor: 255, 0, 62;
     /* chillax colours hex */
-    --accentcolorV2: #fb5454;
+    --accentcolorV2: #ff003e;
 
 
     /* settings modal root */
@@ -164,7 +164,147 @@
     --activity-card-background: transparent;
     --deprecated-panel-background: transparent;
 }
+/*custom mentioned colour*/
+.theme-dark .mentioned_fa6fd2:before {
+  background: linear-gradient(135deg, #3b3b3b, var(--accentcolorV2)) !important;
+}
+.theme-dark .mentioned_fa6fd2 {
+  background: linear-gradient(
+    60deg,
+    rgba(41, 41, 41, 0.3),
+    rgba(var(--accentcolor), 0.9)
+  ) !important;
+}
+.theme-dark .mentioned_fa6fd2:hover {
+  background: linear-gradient(
+    60deg,
+    rgba(32, 32, 32, 0.5),
+    rgba(var(--accentcolor))
+  ) !important;
+}
 
+
+/* Change the color of the typing indicator dots */
+.typingDots_d92d42 > svg > g > circle {
+  color: rgba(255, 0, 62, 1);
+}
+
+/*avatar only memberlist*/
+.membersWrap__5ca6b {
+  min-width: unset;
+}
+
+.members__573eb {
+  max-width: 65px;
+  min-width: 65px;
+  transition: 0.5s ease;
+}
+
+.members__573eb:hover {
+  max-width: 240px;
+  min-width: 240px;
+}
+
+div:not(:hover)>.members__573eb>div {
+  padding-top: 10px;
+}
+
+/* Fix alignment issues with the members list */
+.container_b2ce9c,
+.membersWrap__5ca6b {
+  width: 65px;
+}
+
+/* Make the member list expand on top of the chat instead of shifting it */
+.members__573eb {
+  margin-left: 0px;
+  background-color: #0000;
+  transition: 0.5s ease;
+}
+
+.members__573eb:hover {
+  margin-left: -175px;
+  background-color: #181a1ddd;
+}
+
+/* Make the list fill the window height */
+.membersWrap__5ca6b {
+  height: 100%;
+}
+
+/* Fix the member count addon (vencord) */
+.members__573eb:not(:hover) > #vc-membercount > div > span:first-child {
+    display: none !important;
+}
+.members__573eb:not(:hover) > #vc-membercount > div {
+    box-sizing: border-box !important;
+    flex: 1 0 100%;
+}
+.members__573eb:not(:hover) > #vc-membercount {
+  flex-wrap: wrap;
+}
+
+/* is unread stuff */
+.content__7191e {
+  display: none;
+  right: 50% !important;
+}
+
+.unreadPillCap__44e20 {
+  display: none;
+  right: 50%;
+}
+
+.isUnread_de09f5 {
+  --divider-color: rgb(255, 255, 255);
+  border: none;
+  background: linear-gradient(90deg,
+      rgb(255, 255, 255) 0%,
+      #ff003e 25%,
+      rgba(0, 0, 0, 0) 50%,
+      #ff003e 75%,
+      rgb(255, 255, 255) 100%);
+  height: 1px;
+}
+
+
+/* Make the typing indicator text inside channels/DM's match your accent color */
+
+.typing__6fd1d strong:last-child::after {
+  color: rgba(var(--accentcolor), 1);
+}
+
+.typing__6fd1d strong:nth-last-child()::after {
+  color: rgba(var(--accentcolor), 1);
+}
+
+.typing__6fd1d strong {
+  color: rgba(var(--accentcolor), 1);
+}
+
+.typing__6fd1d strong:nth-last-child(2)::after {
+  color: rgba(var(--accentcolor), 1);
+}
+
+.typingDots_d92d42 > svg > g > circle {
+  color: rgba(var(--accentcolor), 1);
+}
+
+/* Make unread DM's highlighted based on accent color */
+.link_c91bad:has(.highlighted_f9647d) {
+  border-left: 2px solid rgba(var(--accentcolor), 0.8);
+  background: linear-gradient(
+    90deg,
+    rgba(var(--accentcolor), 0.3),
+    rgba(var(--accentcolor), 0.2),
+    transparent
+  );
+}
+
+/* server member list */
+.members_cbd271:hover {
+    background: linear-gradient(90deg, rgba rgba(36, 36, 36, 0) 0%, rgba(36, 36, 36, 0) 0%, rgba(36, 36, 36, 0) 100%) !important;
+}
 /*!*friends grid banner colour*!*/
 /*.theme-dark {*/
 /*    --FG-cards-banner-background: transparent !important;*/
